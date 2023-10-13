@@ -22,9 +22,7 @@ public class Reserve {
 	private Long r_id;
 
 	private Date r_date_reserve;
-	private Time r_time_reserve;
-	private Date r_date_deadline;
-	private Time r_time_deadline;
+	private String r_time_reserve;
 
 	@OneToOne
 	@JoinColumn(name = "c_id")
@@ -42,14 +40,12 @@ public class Reserve {
 		super();
 	}
 
-	public Reserve(Long r_id, Date r_date_reserve, Time r_time_reserve, Date r_date_deadline, Time r_time_deadline,
-			Customer customer, ShootingRange shootingRange, List<Gun> guns) {
+	public Reserve(Long r_id, Date r_date_reserve, String r_time_reserve, Customer customer,
+			ShootingRange shootingRange, List<Gun> guns) {
 		super();
 		this.r_id = r_id;
 		this.r_date_reserve = r_date_reserve;
 		this.r_time_reserve = r_time_reserve;
-		this.r_date_deadline = r_date_deadline;
-		this.r_time_deadline = r_time_deadline;
 		this.customer = customer;
 		this.shootingRange = shootingRange;
 		this.guns = guns;
@@ -71,28 +67,12 @@ public class Reserve {
 		this.r_date_reserve = r_date_reserve;
 	}
 
-	public Time getR_time_reserve() {
+	public String getR_time_reserve() {
 		return r_time_reserve;
 	}
 
-	public void setR_time_reserve(Time r_time_reserve) {
+	public void setR_time_reserve(String r_time_reserve) {
 		this.r_time_reserve = r_time_reserve;
-	}
-
-	public Date getR_date_deadline() {
-		return r_date_deadline;
-	}
-
-	public void setR_date_deadline(Date r_date_deadline) {
-		this.r_date_deadline = r_date_deadline;
-	}
-
-	public Time getR_time_deadline() {
-		return r_time_deadline;
-	}
-
-	public void setR_time_deadline(Time r_time_deadline) {
-		this.r_time_deadline = r_time_deadline;
 	}
 
 	public Customer getCustomer() {
