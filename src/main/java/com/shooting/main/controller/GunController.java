@@ -14,7 +14,7 @@ import com.shooting.main.repository.GunRepository;
 @RestController
 public class GunController {
 	@Autowired
-	private GunRepository gunRepository;
+	GunRepository gunRepository;
 
 	@PostMapping("/gun")
 	public ResponseEntity<Object> addGun(@RequestBody Gun gun) {

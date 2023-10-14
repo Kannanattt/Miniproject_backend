@@ -48,6 +48,7 @@ public class UserController {
 				Map<String, Object> userWithRoleData = new HashMap<>();
 				userWithRoleData.put("u_id", user.getU_id());
 				userWithRoleData.put("username", user.getUsername());
+				userWithRoleData.put("password", user.getPassword());
 				userWithRoleData.put("role", user.getRole());
 				Long userId = user.getU_id();
 
@@ -214,6 +215,7 @@ public class UserController {
 				// You can also update common user data here
 				if (updatedUserData.containsKey("username")) {
 					user.setUsername((String) updatedUserData.get("username"));
+					user.setPassword((String) updatedUserData.get("password"));
 				}
 
 				// Save the updated user data

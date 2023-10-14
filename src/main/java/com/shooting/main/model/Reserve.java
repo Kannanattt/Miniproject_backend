@@ -33,7 +33,7 @@ public class Reserve {
 	private ShootingRange shootingRange;
 
 	@OneToMany
-	@JoinColumn(name = "g_id")
+	@JoinColumn(name = "gun")
 	private List<Gun> guns;
 
 	public Reserve() {

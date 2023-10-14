@@ -14,7 +14,7 @@ import com.shooting.main.repository.ShootingRangeRepository;
 @RestController
 public class ShootingRangeController {
     @Autowired
-    private ShootingRangeRepository shootingRangeRepository;
+    ShootingRangeRepository shootingRangeRepository;
 
     @PostMapping("/shootingrange")
     public ResponseEntity<Object> addShootingRange(@RequestBody ShootingRange shootingRange) {

@@ -14,7 +14,7 @@ import com.shooting.main.repository.ReserveRepository;
 @RestController
 public class ReserveController {
     @Autowired
-    private ReserveRepository reserveRepository;
+    ReserveRepository reserveRepository;
 
     @PostMapping("/reserve")
     public ResponseEntity<Object> addReserve(@RequestBody Reserve reserve) {
