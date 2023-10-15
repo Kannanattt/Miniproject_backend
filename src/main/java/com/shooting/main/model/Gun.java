@@ -16,20 +16,15 @@ public class Gun {
 	private Long g_id;
 
 	private String g_name;
-	
-	@ManyToOne
-    @JoinColumn(name = "gun")
-	private Reserve reserve;
 
 	public Gun() {
 		super();
 	}
 
-	public Gun(Long g_id, String g_name, Reserve reserve) {
+	public Gun(Long g_id, String g_name) {
 		super();
 		this.g_id = g_id;
 		this.g_name = g_name;
-		this.reserve = reserve;
 	}
 
 	public Long getG_id() {
@@ -47,15 +42,5 @@ public class Gun {
 	public void setG_name(String g_name) {
 		this.g_name = g_name;
 	}
-
-//	public Reserve getReserve() {
-//		return reserve;
-//	}
-
-	public void setReserve(Reserve reserve) {
-		this.reserve = reserve;
-	}
-
-
 
 }

@@ -32,16 +32,14 @@ public class Reserve {
 	@JoinColumn(name = "s_id")
 	private ShootingRange shootingRange;
 
-	@OneToMany
-	@JoinColumn(name = "gun")
-	private List<Gun> guns;
+	private List<Object> guns;
 
 	public Reserve() {
 		super();
 	}
 
 	public Reserve(Long r_id, Date r_date_reserve, String r_time_reserve, Customer customer,
-			ShootingRange shootingRange, List<Gun> guns) {
+			ShootingRange shootingRange, List<Object> guns) {
 		super();
 		this.r_id = r_id;
 		this.r_date_reserve = r_date_reserve;
@@ -91,11 +89,11 @@ public class Reserve {
 		this.shootingRange = shootingRange;
 	}
 
-	public List<Gun> getGuns() {
+	public List<Object> getGuns() {
 		return guns;
 	}
 
-	public void setGuns(List<Gun> guns) {
+	public void setGuns(List<Object> guns) {
 		this.guns = guns;
 	}
 

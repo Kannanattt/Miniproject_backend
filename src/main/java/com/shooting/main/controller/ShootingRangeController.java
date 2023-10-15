@@ -77,7 +77,6 @@ public class ShootingRangeController {
             if (shootingRange.isPresent()) {
                 ShootingRange shootingRangeEdit = shootingRange.get();
                 shootingRangeEdit.setS_name(updatedShootingRange.getS_name());
-                shootingRangeEdit.setShootingStatus(updatedShootingRange.getShootingStatus());
                 // You can also update the associated ShootingStatus here if needed.
                 shootingRangeRepository.save(shootingRangeEdit);
                 return new ResponseEntity<>(shootingRangeEdit, HttpStatus.OK);

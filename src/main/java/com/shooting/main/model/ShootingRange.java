@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,19 +15,14 @@ public class ShootingRange {
 
 	private String s_name;
 
-	@ManyToOne
-	@JoinColumn(name = "status")
-	private ShootingStatus shootingStatus;
-
 	public ShootingRange() {
 		super();
 	}
 
-	public ShootingRange(Long s_id, String s_name, ShootingStatus shootingStatus) {
+	public ShootingRange(Long s_id, String s_name) {
 		super();
 		this.s_id = s_id;
 		this.s_name = s_name;
-		this.shootingStatus = shootingStatus;
 	}
 
 	public Long getS_id() {
@@ -46,14 +39,6 @@ public class ShootingRange {
 
 	public void setS_name(String s_name) {
 		this.s_name = s_name;
-	}
-
-	public ShootingStatus getShootingStatus() {
-		return shootingStatus;
-	}
-
-	public void setShootingStatus(ShootingStatus shootingStatus) {
-		this.shootingStatus = shootingStatus;
 	}
 
 }
